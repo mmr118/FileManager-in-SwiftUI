@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Note: Codable, Identifiable, Hashable {
+struct Note: Datum {
     
     // MARK: - Properties
     var id = UUID()

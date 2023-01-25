@@ -31,8 +31,8 @@ struct NoteListView: View {
                         NoteCell(note: note)
                     }
                 }
-                .onDelete(perform: dataProvider.delete)
-                .onMove(perform: dataProvider.move)
+                .onDelete(perform: dataProvider.deleteEvent)
+                .onMove(perform: dataProvider.moveEvent)
             }
             .navigationDestination(for: Note.self) { selectedNote in
                 NoteEditView(note: selectedNote)
