@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct NoteListView: View {
 
     // MARK: - Properties
     @ObservedObject var dataProvider = DataProvider.shared
@@ -19,7 +19,7 @@ struct MainView: View {
         NavigationView {
             List {
                 ForEach(dataProvider.allNotes) { note in
-                    NoteListCell(note: note)
+                    NoteCell(note: note)
                 }
                 .onDelete(perform: dataProvider.delete)
                 .onMove(perform: dataProvider.move)
@@ -40,6 +40,6 @@ struct MainView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(dataProvider: DataProvider.shared)
+        NoteListView(dataProvider: DataProvider.shared)
     }
 }

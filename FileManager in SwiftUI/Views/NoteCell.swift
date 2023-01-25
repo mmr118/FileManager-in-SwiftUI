@@ -1,5 +1,5 @@
 //
-//  NoteListCell.swift
+//  NoteCell.swift
 //  FileManager in SwiftUI
 //
 //  Created by Can Balkaya on 2/27/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NoteListCell: View {
+struct NoteCell: View {
     
     // MARK: - Properties
     let note: Note
@@ -26,6 +26,6 @@ struct NoteListCell: View {
 
 struct NoteListCell_Previews: PreviewProvider {
     static var previews: some View {
-        NoteListCell(note: Note(title: "Go to Apple Store", description: "Buy an iPhone 12 Pro Max 256GB"))
+        NoteCell(note: Note(title: "Go to Apple Store", description: "Buy an iPhone 12 Pro Max 256GB"))
     }
 }

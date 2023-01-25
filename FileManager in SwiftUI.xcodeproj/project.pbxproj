@@ -3,30 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3A1F1BE525EAAE71006739C2 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F1BE425EAAE71006739C2 /* AddButton.swift */; };
-		3A30BB0D25EA935C00FE35FF /* NoteListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A30BB0C25EA935C00FE35FF /* NoteListCell.swift */; };
+		3A30BB0D25EA935C00FE35FF /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A30BB0C25EA935C00FE35FF /* NoteCell.swift */; };
 		3A7F0FE725D6ECEB00D16F44 /* FileManager_in_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7F0FE625D6ECEB00D16F44 /* FileManager_in_SwiftUIApp.swift */; };
-		3A7F0FE925D6ECEB00D16F44 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7F0FE825D6ECEB00D16F44 /* MainView.swift */; };
+		3A7F0FE925D6ECEB00D16F44 /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7F0FE825D6ECEB00D16F44 /* NoteListView.swift */; };
 		3A7F0FEB25D6ECED00D16F44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A7F0FEA25D6ECED00D16F44 /* Assets.xcassets */; };
 		3A7F0FEE25D6ECED00D16F44 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A7F0FED25D6ECED00D16F44 /* Preview Assets.xcassets */; };
 		3A88756225E8297400A4705A /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88756125E8297400A4705A /* DataProvider.swift */; };
 		3A88756625E82A9300A4705A /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88756525E82A9300A4705A /* Note.swift */; };
 		3A88756C25E832DB00A4705A /* TextFieldAlertViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88756B25E832DB00A4705A /* TextFieldAlertViewContoller.swift */; };
 		3A88757025E8344E00A4705A /* TextFieldAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88756F25E8344D00A4705A /* TextFieldAlert.swift */; };
-		3A88757325E8349500A4705A /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88757225E8349500A4705A /* View+Ext.swift */; };
+		3A88757325E8349500A4705A /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88757225E8349500A4705A /* View+Extensions.swift */; };
 		3A88757725E834D700A4705A /* TextFieldWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88757625E834D700A4705A /* TextFieldWrapper.swift */; };
+		F95820562980ABF000A72E60 /* NMAUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = F95820552980ABF000A72E60 /* NMAUtilities */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A1F1BE425EAAE71006739C2 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
-		3A30BB0C25EA935C00FE35FF /* NoteListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListCell.swift; sourceTree = "<group>"; };
+		3A30BB0C25EA935C00FE35FF /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		3A7F0FE325D6ECEB00D16F44 /* FileManager in SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FileManager in SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A7F0FE625D6ECEB00D16F44 /* FileManager_in_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager_in_SwiftUIApp.swift; sourceTree = "<group>"; };
-		3A7F0FE825D6ECEB00D16F44 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		3A7F0FE825D6ECEB00D16F44 /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
 		3A7F0FEA25D6ECED00D16F44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A7F0FED25D6ECED00D16F44 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3A7F0FEF25D6ECED00D16F44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,7 +35,7 @@
 		3A88756525E82A9300A4705A /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		3A88756B25E832DB00A4705A /* TextFieldAlertViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlertViewContoller.swift; sourceTree = "<group>"; };
 		3A88756F25E8344D00A4705A /* TextFieldAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlert.swift; sourceTree = "<group>"; };
-		3A88757225E8349500A4705A /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		3A88757225E8349500A4705A /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		3A88757625E834D700A4705A /* TextFieldWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,40 +44,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F95820562980ABF000A72E60 /* NMAUtilities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3A1F1BDD25EAADC4006739C2 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				3A7F0FE625D6ECEB00D16F44 /* FileManager_in_SwiftUIApp.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
 		3A1F1BDE25EAADCD006739C2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3A88756125E8297400A4705A /* DataProvider.swift */,
 				3A88756525E82A9300A4705A /* Note.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		3A1F1BDF25EAADD4006739C2 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				3A7F0FE825D6ECEB00D16F44 /* MainView.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		3A1F1BE025EAADDC006739C2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3A30BB0C25EA935C00FE35FF /* NoteListCell.swift */,
+				3A7F0FE825D6ECEB00D16F44 /* NoteListView.swift */,
+				3A30BB0C25EA935C00FE35FF /* NoteCell.swift */,
 				3A1F1BE425EAAE71006739C2 /* AddButton.swift */,
 				3A88757625E834D700A4705A /* TextFieldWrapper.swift */,
 				3A88756F25E8344D00A4705A /* TextFieldAlert.swift */,
@@ -85,13 +73,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		3A1F1BE125EAADEA006739C2 /* Helpers */ = {
+		3A1F1BE125EAADEA006739C2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				3A88756125E8297400A4705A /* DataProvider.swift */,
-				3A88757225E8349500A4705A /* View+Ext.swift */,
+				3A88757225E8349500A4705A /* View+Extensions.swift */,
 			);
-			path = Helpers;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		3A1F1BE325EAAE07006739C2 /* Sources */ = {
@@ -122,11 +109,10 @@
 		3A7F0FE525D6ECEB00D16F44 /* FileManager in SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				3A7F0FE625D6ECEB00D16F44 /* FileManager_in_SwiftUIApp.swift */,
 				3A1F1BDE25EAADCD006739C2 /* Models */,
-				3A1F1BDF25EAADD4006739C2 /* Controllers */,
 				3A1F1BE025EAADDC006739C2 /* Views */,
-				3A1F1BE125EAADEA006739C2 /* Helpers */,
-				3A1F1BDD25EAADC4006739C2 /* Utilities */,
+				3A1F1BE125EAADEA006739C2 /* Extensions */,
 				3A1F1BE325EAAE07006739C2 /* Sources */,
 				3A7F0FEC25D6ECED00D16F44 /* Preview Content */,
 			);
@@ -157,6 +143,9 @@
 			dependencies = (
 			);
 			name = "FileManager in SwiftUI";
+			packageProductDependencies = (
+				F95820552980ABF000A72E60 /* NMAUtilities */,
+			);
 			productName = "FileManager in SwiftUI";
 			productReference = 3A7F0FE325D6ECEB00D16F44 /* FileManager in SwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -184,6 +173,9 @@
 				Base,
 			);
 			mainGroup = 3A7F0FDA25D6ECEB00D16F44;
+			packageReferences = (
+				F95820542980ABF000A72E60 /* XCRemoteSwiftPackageReference "NMAUtilities" */,
+			);
 			productRefGroup = 3A7F0FE425D6ECEB00D16F44 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -211,12 +203,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A88756C25E832DB00A4705A /* TextFieldAlertViewContoller.swift in Sources */,
-				3A30BB0D25EA935C00FE35FF /* NoteListCell.swift in Sources */,
+				3A30BB0D25EA935C00FE35FF /* NoteCell.swift in Sources */,
 				3A88756225E8297400A4705A /* DataProvider.swift in Sources */,
 				3A1F1BE525EAAE71006739C2 /* AddButton.swift in Sources */,
-				3A7F0FE925D6ECEB00D16F44 /* MainView.swift in Sources */,
+				3A7F0FE925D6ECEB00D16F44 /* NoteListView.swift in Sources */,
 				3A88757725E834D700A4705A /* TextFieldWrapper.swift in Sources */,
-				3A88757325E8349500A4705A /* View+Ext.swift in Sources */,
+				3A88757325E8349500A4705A /* View+Extensions.swift in Sources */,
 				3A7F0FE725D6ECEB00D16F44 /* FileManager_in_SwiftUIApp.swift in Sources */,
 				3A88757025E8344E00A4705A /* TextFieldAlert.swift in Sources */,
 				3A88756625E82A9300A4705A /* Note.swift in Sources */,
@@ -349,15 +341,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FileManager in SwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4DHQU43U3E;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "FileManager in SwiftUI/Sources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_CFBundleDisplayName = "FileManager Example";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "canbalkaya.FileManager-in-SwiftUI";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.notmoniapps.example.FileManager-in-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -371,15 +364,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FileManager in SwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4DHQU43U3E;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "FileManager in SwiftUI/Sources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_CFBundleDisplayName = "FileManager Example";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "canbalkaya.FileManager-in-SwiftUI";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.notmoniapps.example.FileManager-in-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -408,6 +402,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F95820542980ABF000A72E60 /* XCRemoteSwiftPackageReference "NMAUtilities" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mmr118/NMAUtilities.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F95820552980ABF000A72E60 /* NMAUtilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F95820542980ABF000A72E60 /* XCRemoteSwiftPackageReference "NMAUtilities" */;
+			productName = NMAUtilities;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3A7F0FDB25D6ECEB00D16F44 /* Project object */;
 }

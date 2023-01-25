@@ -1,5 +1,5 @@
 //
-//  View+Ext.swift
+//  View+Extensions.swift
 //  FileManager in SwiftUI
 //
 //  Created by Can Balkaya on 2/25/21.

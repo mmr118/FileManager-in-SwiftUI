@@ -15,8 +15,8 @@ class DataProvider: ObservableObject {
     @Published var allNotes = [Note]()
     
     // MARK: - Life Cycle
-    init() {
-        let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+    private init(fileManager: FileManager = .default) {
+        let documentsPath = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let notesPath = documentsPath.appendingPathComponent("notes").appendingPathExtension("json")
         dataSourceURL = notesPath
         
