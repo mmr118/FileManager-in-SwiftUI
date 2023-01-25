@@ -16,12 +16,10 @@ struct NoteListView: View {
     
     @EnvironmentObject var dataProvider: DataProvider
     
-    @State private var alertShowing = false
+    @State private var isPresentingCreateNote = false
     @State private var noteTitle = String()
     @State private var noteDetails = String()
     
-    @State private var newNote: Note?
-
     // MARK: - UI Elements
     var body: some View {
         
@@ -36,17 +34,17 @@ struct NoteListView: View {
                 .onDelete(perform: dataProvider.delete)
                 .onMove(perform: dataProvider.move)
             }
-            .navigationDestination(for: Note.self, destination: { selectedNote in
-                NoteDetailView(note: selectedNote)
+            .navigationDestination(for: Note.self) { selectedNote in
+                NoteEditView(note: selectedNote)
                     .environmentObject(dataProvider)
-            })
+            }
             .listStyle(InsetListStyle())
-            .sheet(item: $newNote, content: { note in
+            .sheet(isPresented: $isPresentingCreateNote) {
                 NavigationStack {
-                    NoteDetailView(note: note)
+                    NoteEditView()
                         .environmentObject(dataProvider)
                 }
-            })
+            }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     EditButton()
@@ -54,9 +52,6 @@ struct NoteListView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     createNoteButton()
                 }
-            }
-            .alert("New Note", isPresented: $alertShowing) {
-                createNoteAlertView()
             }
             .navigationTitle("Notes")
             .environment(\.editMode, editMode)
@@ -78,7 +73,7 @@ struct NoteListView: View {
     @ViewBuilder private func createNoteButton() -> some View {
         Button(symbol: .plus) {
             withAnimation {
-                alertShowing.toggle()
+                isPresentingCreateNote.toggle()
             }
         }
         .disabled(editMode?.wrappedValue.isEditing ?? false)

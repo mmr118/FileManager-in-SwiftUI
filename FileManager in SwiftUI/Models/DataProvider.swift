@@ -48,16 +48,26 @@ class DataProvider: ObservableObject {
         }
     }
     
-    func create(note: Note) {
+    @discardableResult
+    func create(note: Note) -> Bool {
+        guard !allNotes.contains(where: { $0.id == note.id }) else { return false }
         allNotes.insert(note, at: 0)
         saveNotes()
+        return true
     }
     
-    func changeNote(note: Note, index: Int) {
+    func changeNote(note: Note, at index: Int) {
         allNotes[index] = note
         saveNotes()
     }
-    
+
+    @discardableResult
+    func updateNote(note: Note) -> Bool {
+        guard let index = allNotes.firstIndex(where: { $0.id == note.id }) else { return false }
+        changeNote(note: note, at: index)
+        return true
+    }
+
     func delete(_ offsets: IndexSet) {
         allNotes.remove(atOffsets: offsets)
         saveNotes()
