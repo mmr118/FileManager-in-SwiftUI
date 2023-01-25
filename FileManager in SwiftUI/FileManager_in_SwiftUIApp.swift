@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct FileManager_in_SwiftUIApp: App {
+
     var body: some Scene {
         WindowGroup {
-            NoteListView().accentColor(.red)
+            NoteListView()
+                .environmentObject(DataProvider.shared)
+                .accentColor(.red)
         }
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import NMAUtilities
 
 struct NoteCell: View {
     
@@ -20,12 +21,16 @@ struct NoteCell: View {
             
             Text("\(note.description)")
                 .font(.footnote)
+                .lineLimit(2)
         }
     }
 }
 
+
+// MARK: - Previews
 struct NoteListCell_Previews: PreviewProvider {
     static var previews: some View {
-        NoteCell(note: Note(title: "Go to Apple Store", description: "Buy an iPhone 12 Pro Max 256GB"))
+        NoteCell(note: note_1)
+            .previewUpdateTime()
     }
 }

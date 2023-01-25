@@ -6,40 +6,103 @@
 //
 
 import SwiftUI
+import NMAUtilities
+import NMASFSymbol
 
 struct NoteListView: View {
 
     // MARK: - Properties
-    @ObservedObject var dataProvider = DataProvider.shared
+    @Environment(\.editMode) var editMode
+    
+    @EnvironmentObject var dataProvider: DataProvider
+    
     @State private var alertShowing = false
-    @State private var editMode: EditMode = .inactive
+    @State private var noteTitle = String()
+    @State private var noteDetails = String()
+    
+    @State private var newNote: Note?
 
     // MARK: - UI Elements
     var body: some View {
-        NavigationView {
+        
+        NavigationStack {
+            
             List {
                 ForEach(dataProvider.allNotes) { note in
-                    NoteCell(note: note)
+                    NavigationLink(value: note) {
+                        NoteCell(note: note)
+                    }
                 }
                 .onDelete(perform: dataProvider.delete)
                 .onMove(perform: dataProvider.move)
             }
-            .navigationTitle(Text("Notes"))
-            .navigationBarItems(
-                leading: EditButton(),
-                trailing: AddButton(editMode: $editMode, alertShowing: $alertShowing)
-            )
-            .textFieldAlert(isPresented: $alertShowing) {
-                TextFieldAlert(title: "Write a note!", message: nil)
-            }
+            .navigationDestination(for: Note.self, destination: { selectedNote in
+                NoteDetailView(note: selectedNote)
+                    .environmentObject(dataProvider)
+            })
             .listStyle(InsetListStyle())
-            .environment(\.editMode, $editMode)
+            .sheet(item: $newNote, content: { note in
+                NavigationStack {
+                    NoteDetailView(note: note)
+                        .environmentObject(dataProvider)
+                }
+            })
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    createNoteButton()
+                }
+            }
+            .alert("New Note", isPresented: $alertShowing) {
+                createNoteAlertView()
+            }
+            .navigationTitle("Notes")
+            .environment(\.editMode, editMode)
         }
+    }
+    
+    @ViewBuilder private func createNoteAlertView() -> some View {
+        TextField("Title", text: $noteTitle)
+        TextEditor(text: $noteDetails)
+        Button("Cancel") {
+            resetNoteValues()
+        }
+        Button("Save") {
+            saveNote()
+            resetNoteValues()
+        }
+    }
+    
+    @ViewBuilder private func createNoteButton() -> some View {
+        Button(symbol: .plus) {
+            withAnimation {
+                alertShowing.toggle()
+            }
+        }
+        .disabled(editMode?.wrappedValue.isEditing ?? false)
+    }
+    
+    private func resetNoteValues() {
+        noteTitle = String()
+        noteDetails = String()
+    }
+    
+    private func saveNote() {
+        let newNote = Note(title: noteTitle, description: noteDetails)
+        dataProvider.create(note: newNote)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+
+// MARK: - Previews
+struct NoteListView_Previews: PreviewProvider {
     static var previews: some View {
-        NoteListView(dataProvider: DataProvider.shared)
+        NavigationStack {
+            NoteListView()
+        }
+        .environmentObject(DataProvider.shared)
+        .previewUpdateTime()
     }
 }

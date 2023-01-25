@@ -9,13 +9,15 @@ import Foundation
 
 class DataProvider: ObservableObject {
     
-    // MARK: - Propeties
-    static let shared = DataProvider()
+    // MARK: - Properties
+    private static let _shared = DataProvider()
+    class var shared: DataProvider { _shared }
+    
     private let dataSourceURL: URL
     @Published var allNotes = [Note]()
     
     // MARK: - Life Cycle
-    private init(fileManager: FileManager = .default) {
+    init(fileManager: FileManager = .default) {
         let documentsPath = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let notesPath = documentsPath.appendingPathComponent("notes").appendingPathExtension("json")
         dataSourceURL = notesPath
@@ -28,7 +30,7 @@ class DataProvider: ObservableObject {
         do {
             let decoder = PropertyListDecoder()
             let data = try Data(contentsOf: dataSourceURL)
-            let decodedNotes = try! decoder.decode([Note].self, from: data)
+            let decodedNotes = try decoder.decode([Note].self, from: data)
             
             return decodedNotes
         } catch {
