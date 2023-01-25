@@ -38,11 +38,11 @@ struct NoteDetailView: View {
     }
     
     @ViewBuilder private func detailText() -> some View {
-        if note.description.isEmpty {
+        if note.detail.isEmpty {
             Text("No details.")
                 .foregroundStyle(.secondary)
         } else {
-            Text(note.description)
+            Text(note.detail)
         }
     }
 

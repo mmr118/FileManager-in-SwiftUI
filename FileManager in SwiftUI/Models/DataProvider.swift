@@ -135,6 +135,16 @@ class DataProvider: ObservableObject {
         saveEvents()
     }
     
-
-
 }
+
+
+extension DataProvider {
+    
+    var allDatum: [(any Datum)] { allNotes + allEvents }
+    
+    
+    private func saveAllDatum() {
+
+    }
+}
+

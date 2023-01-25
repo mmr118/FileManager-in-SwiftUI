@@ -19,7 +19,7 @@ struct NoteCell: View {
             Text("\(note.title)")
                 .font(.headline)
             
-            Text("\(note.description)")
+            Text("\(note.detail)")
                 .font(.footnote)
                 .lineLimit(2)
         }

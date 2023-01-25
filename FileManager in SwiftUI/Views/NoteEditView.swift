@@ -22,7 +22,7 @@ struct NoteEditView: View {
     var isNewNote: Bool
     
     init(note: Note? = nil) {
-        self.note = note ?? Note(title: "", description: "")
+        self.note = note ?? Note(title: "", detail: "")
         self.isNewNote = note == nil
     }
 
@@ -54,13 +54,13 @@ struct NoteEditView: View {
         .navigationTitle(note.title.isEmpty ? "New Note" : note.title)
         .onAppear {
             title = note.title
-            detail = note.description
+            detail = note.detail
         }
         
     }
     
     private func saveChanges() {
-        let updatedNote = Note(id: note.id, title: title, description: detail)
+        let updatedNote = Note(id: note.id, title: title, detail: detail)
         dataProvider.updateNote(note: updatedNote)
     }
 

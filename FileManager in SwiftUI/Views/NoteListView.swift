@@ -85,7 +85,7 @@ struct NoteListView: View {
     }
     
     private func saveNote() {
-        let newNote = Note(title: noteTitle, description: noteDetails)
+        let newNote = Note(title: noteTitle, detail: noteDetails)
         dataProvider.create(note: newNote)
     }
 }

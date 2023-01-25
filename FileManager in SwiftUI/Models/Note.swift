@@ -7,15 +7,28 @@
 
 import Foundation
 
-struct Note: Datum {
+class Note: Datum {
     
     // MARK: - Properties
-    var id = UUID()
-    var dateCreated = Date()
-    let title: String
-    let description: String
-    
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
+    var id: UUID
+    var title: String
+    var detail: String
+    var dateCreated: Date
+
+    required init(id: UUID = UUID(), title: String, detail: String) {
+        self.id = id
+        self.title = title
+        self.detail = detail
+        self.dateCreated = Date()
     }
+    
+    convenience init(id: UUID = UUID(), title: String, detail: String, dateCreated: Date) {
+        self.init(id: id, title: title, detail: detail)
+        self.dateCreated = dateCreated
+    }
+    
+    convenience init(_ title: String, detail: String) {
+        self.init(title: title, detail: detail)
+    }
+    
 }

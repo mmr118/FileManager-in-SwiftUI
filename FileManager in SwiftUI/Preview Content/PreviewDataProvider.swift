@@ -41,7 +41,7 @@ class PreviewDataProvider: DataProvider {
     func createPreviewNotes() {
         for index in (0..<5) {
             let details = String.randomWords(10).joined(separator: " ").appending(".\n\n").appending(String.LoremIpsum)
-            let newNote = Note(title: "Preview \(index)", description: details)
+            let newNote = Note("Preview \(index)", detail: details)
             create(note: newNote)
         }
     }
