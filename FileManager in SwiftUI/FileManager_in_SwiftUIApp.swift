@@ -11,7 +11,8 @@ import SwiftUI
 struct FileManager_in_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView().accentColor(.red)
+            ContentView()
+                .accentColor(.red)
         }
     }
 }

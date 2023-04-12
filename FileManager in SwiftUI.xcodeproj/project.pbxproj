@@ -10,15 +10,16 @@
 		3A1F1BE525EAAE71006739C2 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F1BE425EAAE71006739C2 /* AddButton.swift */; };
 		3A30BB0D25EA935C00FE35FF /* NoteListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A30BB0C25EA935C00FE35FF /* NoteListCell.swift */; };
 		3A7F0FE725D6ECEB00D16F44 /* FileManager_in_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7F0FE625D6ECEB00D16F44 /* FileManager_in_SwiftUIApp.swift */; };
-		3A7F0FE925D6ECEB00D16F44 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7F0FE825D6ECEB00D16F44 /* MainView.swift */; };
+		3A7F0FE925D6ECEB00D16F44 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7F0FE825D6ECEB00D16F44 /* ContentView.swift */; };
 		3A7F0FEB25D6ECED00D16F44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A7F0FEA25D6ECED00D16F44 /* Assets.xcassets */; };
 		3A7F0FEE25D6ECED00D16F44 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A7F0FED25D6ECED00D16F44 /* Preview Assets.xcassets */; };
 		3A88756225E8297400A4705A /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88756125E8297400A4705A /* DataProvider.swift */; };
 		3A88756625E82A9300A4705A /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88756525E82A9300A4705A /* Note.swift */; };
 		3A88756C25E832DB00A4705A /* TextFieldAlertViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88756B25E832DB00A4705A /* TextFieldAlertViewContoller.swift */; };
 		3A88757025E8344E00A4705A /* TextFieldAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88756F25E8344D00A4705A /* TextFieldAlert.swift */; };
-		3A88757325E8349500A4705A /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88757225E8349500A4705A /* View+Ext.swift */; };
+		3A88757325E8349500A4705A /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88757225E8349500A4705A /* View+Extensions.swift */; };
 		3A88757725E834D700A4705A /* TextFieldWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88757625E834D700A4705A /* TextFieldWrapper.swift */; };
+		97E2828B29E6C97A00452E45 /* PreviewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E2828A29E6C97A00452E45 /* PreviewUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +27,7 @@
 		3A30BB0C25EA935C00FE35FF /* NoteListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListCell.swift; sourceTree = "<group>"; };
 		3A7F0FE325D6ECEB00D16F44 /* FileManager in SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FileManager in SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A7F0FE625D6ECEB00D16F44 /* FileManager_in_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager_in_SwiftUIApp.swift; sourceTree = "<group>"; };
-		3A7F0FE825D6ECEB00D16F44 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		3A7F0FE825D6ECEB00D16F44 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3A7F0FEA25D6ECED00D16F44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A7F0FED25D6ECED00D16F44 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3A7F0FEF25D6ECED00D16F44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,8 +35,9 @@
 		3A88756525E82A9300A4705A /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		3A88756B25E832DB00A4705A /* TextFieldAlertViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlertViewContoller.swift; sourceTree = "<group>"; };
 		3A88756F25E8344D00A4705A /* TextFieldAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlert.swift; sourceTree = "<group>"; };
-		3A88757225E8349500A4705A /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		3A88757225E8349500A4705A /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		3A88757625E834D700A4705A /* TextFieldWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWrapper.swift; sourceTree = "<group>"; };
+		97E2828A29E6C97A00452E45 /* PreviewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,33 +51,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3A1F1BDD25EAADC4006739C2 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				3A7F0FE625D6ECEB00D16F44 /* FileManager_in_SwiftUIApp.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
 		3A1F1BDE25EAADCD006739C2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3A88756125E8297400A4705A /* DataProvider.swift */,
 				3A88756525E82A9300A4705A /* Note.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		3A1F1BDF25EAADD4006739C2 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				3A7F0FE825D6ECEB00D16F44 /* MainView.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		3A1F1BE025EAADDC006739C2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3A7F0FE825D6ECEB00D16F44 /* ContentView.swift */,
 				3A30BB0C25EA935C00FE35FF /* NoteListCell.swift */,
 				3A1F1BE425EAAE71006739C2 /* AddButton.swift */,
 				3A88757625E834D700A4705A /* TextFieldWrapper.swift */,
@@ -83,15 +71,6 @@
 				3A88756B25E832DB00A4705A /* TextFieldAlertViewContoller.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		3A1F1BE125EAADEA006739C2 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				3A88756125E8297400A4705A /* DataProvider.swift */,
-				3A88757225E8349500A4705A /* View+Ext.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		3A1F1BE325EAAE07006739C2 /* Sources */ = {
@@ -122,11 +101,10 @@
 		3A7F0FE525D6ECEB00D16F44 /* FileManager in SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				97E2828C29E6CA2200452E45 /* Extensions */,
+				3A7F0FE625D6ECEB00D16F44 /* FileManager_in_SwiftUIApp.swift */,
 				3A1F1BDE25EAADCD006739C2 /* Models */,
-				3A1F1BDF25EAADD4006739C2 /* Controllers */,
 				3A1F1BE025EAADDC006739C2 /* Views */,
-				3A1F1BE125EAADEA006739C2 /* Helpers */,
-				3A1F1BDD25EAADC4006739C2 /* Utilities */,
 				3A1F1BE325EAAE07006739C2 /* Sources */,
 				3A7F0FEC25D6ECED00D16F44 /* Preview Content */,
 			);
@@ -136,9 +114,18 @@
 		3A7F0FEC25D6ECED00D16F44 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				97E2828A29E6C97A00452E45 /* PreviewUtils.swift */,
 				3A7F0FED25D6ECED00D16F44 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		97E2828C29E6CA2200452E45 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3A88757225E8349500A4705A /* View+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +202,10 @@
 				3A30BB0D25EA935C00FE35FF /* NoteListCell.swift in Sources */,
 				3A88756225E8297400A4705A /* DataProvider.swift in Sources */,
 				3A1F1BE525EAAE71006739C2 /* AddButton.swift in Sources */,
-				3A7F0FE925D6ECEB00D16F44 /* MainView.swift in Sources */,
+				3A7F0FE925D6ECEB00D16F44 /* ContentView.swift in Sources */,
 				3A88757725E834D700A4705A /* TextFieldWrapper.swift in Sources */,
-				3A88757325E8349500A4705A /* View+Ext.swift in Sources */,
+				3A88757325E8349500A4705A /* View+Extensions.swift in Sources */,
+				97E2828B29E6C97A00452E45 /* PreviewUtils.swift in Sources */,
 				3A7F0FE725D6ECEB00D16F44 /* FileManager_in_SwiftUIApp.swift in Sources */,
 				3A88757025E8344E00A4705A /* TextFieldAlert.swift in Sources */,
 				3A88756625E82A9300A4705A /* Note.swift in Sources */,
