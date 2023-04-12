@@ -9,7 +9,7 @@ import Foundation
 
 class DataProvider: ObservableObject {
     
-    // MARK: - Propeties
+    // MARK: - Properties
     static let shared = DataProvider()
     private let dataSourceURL: URL
     @Published var allNotes = [Note]()

@@ -21,7 +21,7 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(dataProvider.allNotes) { note in
-                    NoteListCell(note: note)
+                    noteCell(note)
                 }
                 .onDelete(perform: dataProvider.delete)
                 .onMove(perform: dataProvider.move)
@@ -45,6 +45,17 @@ struct ContentView: View {
             }
             .listStyle(InsetListStyle())
             .environment(\.editMode, $editMode)
+        }
+    }
+
+    @ViewBuilder private func noteCell(_ note: Note) -> some View {
+        VStack(alignment: .leading) {
+            Text(note.title)
+                .font(.headline)
+
+            Text(note.description)
+                .font(.footnote)
+                .foregroundStyle(.secondary)
         }
     }
 
