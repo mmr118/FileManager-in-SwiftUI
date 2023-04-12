@@ -14,6 +14,9 @@
 		3A88756225E8297400A4705A /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88756125E8297400A4705A /* DataProvider.swift */; };
 		3A88756625E82A9300A4705A /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88756525E82A9300A4705A /* Note.swift */; };
 		97E2828B29E6C97A00452E45 /* PreviewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E2828A29E6C97A00452E45 /* PreviewUtils.swift */; };
+		97E2828E29E6D97500452E45 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E2828D29E6D97500452E45 /* StorageManager.swift */; };
+		97E2829029E6D98500452E45 /* TaggedNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E2828F29E6D98500452E45 /* TaggedNote.swift */; };
+		97E2829329E6DC0B00452E45 /* NMAUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 97E2829229E6DC0B00452E45 /* NMAUtilities */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,8 @@
 		3A88756125E8297400A4705A /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		3A88756525E82A9300A4705A /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		97E2828A29E6C97A00452E45 /* PreviewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewUtils.swift; sourceTree = "<group>"; };
+		97E2828D29E6D97500452E45 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		97E2828F29E6D98500452E45 /* TaggedNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaggedNote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97E2829329E6DC0B00452E45 /* NMAUtilities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,7 +49,9 @@
 			isa = PBXGroup;
 			children = (
 				3A88756125E8297400A4705A /* DataProvider.swift */,
+				97E2828D29E6D97500452E45 /* StorageManager.swift */,
 				3A88756525E82A9300A4705A /* Note.swift */,
+				97E2828F29E6D98500452E45 /* TaggedNote.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -126,6 +134,9 @@
 			dependencies = (
 			);
 			name = "FileManager in SwiftUI";
+			packageProductDependencies = (
+				97E2829229E6DC0B00452E45 /* NMAUtilities */,
+			);
 			productName = "FileManager in SwiftUI";
 			productReference = 3A7F0FE325D6ECEB00D16F44 /* FileManager in SwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -154,6 +165,9 @@
 				Base,
 			);
 			mainGroup = 3A7F0FDA25D6ECEB00D16F44;
+			packageReferences = (
+				97E2829129E6DC0B00452E45 /* XCRemoteSwiftPackageReference "NMAUtilities" */,
+			);
 			productRefGroup = 3A7F0FE425D6ECEB00D16F44 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -183,6 +197,8 @@
 				3A88756225E8297400A4705A /* DataProvider.swift in Sources */,
 				3A7F0FE925D6ECEB00D16F44 /* ContentView.swift in Sources */,
 				97E2828B29E6C97A00452E45 /* PreviewUtils.swift in Sources */,
+				97E2828E29E6D97500452E45 /* StorageManager.swift in Sources */,
+				97E2829029E6D98500452E45 /* TaggedNote.swift in Sources */,
 				3A7F0FE725D6ECEB00D16F44 /* FileManager_in_SwiftUIApp.swift in Sources */,
 				3A88756625E82A9300A4705A /* Note.swift in Sources */,
 			);
@@ -375,6 +391,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		97E2829129E6DC0B00452E45 /* XCRemoteSwiftPackageReference "NMAUtilities" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mmr118/NMAUtilities";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		97E2829229E6DC0B00452E45 /* NMAUtilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97E2829129E6DC0B00452E45 /* XCRemoteSwiftPackageReference "NMAUtilities" */;
+			productName = NMAUtilities;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3A7F0FDB25D6ECEB00D16F44 /* Project object */;
 }
