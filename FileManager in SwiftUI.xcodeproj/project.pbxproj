@@ -16,7 +16,14 @@
 		97E2828B29E6C97A00452E45 /* PreviewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E2828A29E6C97A00452E45 /* PreviewUtils.swift */; };
 		97E2828E29E6D97500452E45 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E2828D29E6D97500452E45 /* StorageManager.swift */; };
 		97E2829029E6D98500452E45 /* TaggedNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E2828F29E6D98500452E45 /* TaggedNote.swift */; };
-		97E2829329E6DC0B00452E45 /* NMAUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 97E2829229E6DC0B00452E45 /* NMAUtilities */; };
+		97E2829629E6DFD900452E45 /* NMAUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 97E2829529E6DFD900452E45 /* NMAUtilities */; };
+		97E282BB29E711E700452E45 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E282BA29E711E700452E45 /* Tag.swift */; };
+		97E282BD29E711EC00452E45 /* TagManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E282BC29E711EC00452E45 /* TagManager.swift */; };
+		97E282BF29E7123300452E45 /* FileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E282BE29E7123300452E45 /* FileManager+Extensions.swift */; };
+		97E282C229E74A8200452E45 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E282C129E74A8200452E45 /* Utility.swift */; };
+		97E282C429E7511F00452E45 /* OGStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E282C329E7511E00452E45 /* OGStuff.swift */; };
+		97E282C629E753C000452E45 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E282C529E753C000452E45 /* User.swift */; };
+		97E282C829E757D000452E45 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E282C729E757D000452E45 /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +38,13 @@
 		97E2828A29E6C97A00452E45 /* PreviewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewUtils.swift; sourceTree = "<group>"; };
 		97E2828D29E6D97500452E45 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		97E2828F29E6D98500452E45 /* TaggedNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaggedNote.swift; sourceTree = "<group>"; };
+		97E282BA29E711E700452E45 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		97E282BC29E711EC00452E45 /* TagManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagManager.swift; sourceTree = "<group>"; };
+		97E282BE29E7123300452E45 /* FileManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extensions.swift"; sourceTree = "<group>"; };
+		97E282C129E74A8200452E45 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		97E282C329E7511E00452E45 /* OGStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OGStuff.swift; sourceTree = "<group>"; };
+		97E282C529E753C000452E45 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		97E282C729E757D000452E45 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97E2829329E6DC0B00452E45 /* NMAUtilities in Frameworks */,
+				97E2829629E6DFD900452E45 /* NMAUtilities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,9 +63,12 @@
 			isa = PBXGroup;
 			children = (
 				3A88756125E8297400A4705A /* DataProvider.swift */,
+				97E282C529E753C000452E45 /* User.swift */,
 				97E2828D29E6D97500452E45 /* StorageManager.swift */,
 				3A88756525E82A9300A4705A /* Note.swift */,
 				97E2828F29E6D98500452E45 /* TaggedNote.swift */,
+				97E282BA29E711E700452E45 /* Tag.swift */,
+				97E282BC29E711EC00452E45 /* TagManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -62,15 +79,6 @@
 				3A7F0FE825D6ECEB00D16F44 /* ContentView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		3A1F1BE325EAAE07006739C2 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				3A7F0FEA25D6ECED00D16F44 /* Assets.xcassets */,
-				3A7F0FEF25D6ECED00D16F44 /* Info.plist */,
-			);
-			path = Sources;
 			sourceTree = "<group>";
 		};
 		3A7F0FDA25D6ECEB00D16F44 = {
@@ -92,11 +100,13 @@
 		3A7F0FE525D6ECEB00D16F44 /* FileManager in SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				97E282C129E74A8200452E45 /* Utility.swift */,
 				3A7F0FE625D6ECEB00D16F44 /* FileManager_in_SwiftUIApp.swift */,
+				97E282C329E7511E00452E45 /* OGStuff.swift */,
 				97E2828C29E6CA2200452E45 /* Extensions */,
 				3A1F1BDE25EAADCD006739C2 /* Models */,
 				3A1F1BE025EAADDC006739C2 /* Views */,
-				3A1F1BE325EAAE07006739C2 /* Sources */,
+				97E282C029E7214200452E45 /* Resources */,
 				3A7F0FEC25D6ECED00D16F44 /* Preview Content */,
 			);
 			path = "FileManager in SwiftUI";
@@ -114,8 +124,19 @@
 		97E2828C29E6CA2200452E45 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				97E282BE29E7123300452E45 /* FileManager+Extensions.swift */,
+				97E282C729E757D000452E45 /* String+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		97E282C029E7214200452E45 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3A7F0FEF25D6ECED00D16F44 /* Info.plist */,
+				3A7F0FEA25D6ECED00D16F44 /* Assets.xcassets */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +156,7 @@
 			);
 			name = "FileManager in SwiftUI";
 			packageProductDependencies = (
-				97E2829229E6DC0B00452E45 /* NMAUtilities */,
+				97E2829529E6DFD900452E45 /* NMAUtilities */,
 			);
 			productName = "FileManager in SwiftUI";
 			productReference = 3A7F0FE325D6ECEB00D16F44 /* FileManager in SwiftUI.app */;
@@ -166,7 +187,7 @@
 			);
 			mainGroup = 3A7F0FDA25D6ECEB00D16F44;
 			packageReferences = (
-				97E2829129E6DC0B00452E45 /* XCRemoteSwiftPackageReference "NMAUtilities" */,
+				97E2829429E6DFD900452E45 /* XCRemoteSwiftPackageReference "NMAUtilities" */,
 			);
 			productRefGroup = 3A7F0FE425D6ECEB00D16F44 /* Products */;
 			projectDirPath = "";
@@ -194,11 +215,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97E282C629E753C000452E45 /* User.swift in Sources */,
+				97E282BB29E711E700452E45 /* Tag.swift in Sources */,
 				3A88756225E8297400A4705A /* DataProvider.swift in Sources */,
+				97E282C429E7511F00452E45 /* OGStuff.swift in Sources */,
 				3A7F0FE925D6ECEB00D16F44 /* ContentView.swift in Sources */,
+				97E282C229E74A8200452E45 /* Utility.swift in Sources */,
 				97E2828B29E6C97A00452E45 /* PreviewUtils.swift in Sources */,
+				97E282BD29E711EC00452E45 /* TagManager.swift in Sources */,
+				97E282C829E757D000452E45 /* String+Extensions.swift in Sources */,
 				97E2828E29E6D97500452E45 /* StorageManager.swift in Sources */,
 				97E2829029E6D98500452E45 /* TaggedNote.swift in Sources */,
+				97E282BF29E7123300452E45 /* FileManager+Extensions.swift in Sources */,
 				3A7F0FE725D6ECEB00D16F44 /* FileManager_in_SwiftUIApp.swift in Sources */,
 				3A88756625E82A9300A4705A /* Note.swift in Sources */,
 			);
@@ -331,15 +359,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FileManager in SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 4DHQU43U3E;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "FileManager in SwiftUI/Sources/Info.plist";
+				INFOPLIST_FILE = "FileManager in SwiftUI/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "FileManager Ex";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.notmoniapps.example.canbalkaya.FileManager-in-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -353,15 +384,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FileManager in SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 4DHQU43U3E;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "FileManager in SwiftUI/Sources/Info.plist";
+				INFOPLIST_FILE = "FileManager in SwiftUI/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "FileManager Ex";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.notmoniapps.example.canbalkaya.FileManager-in-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -393,20 +427,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		97E2829129E6DC0B00452E45 /* XCRemoteSwiftPackageReference "NMAUtilities" */ = {
+		97E2829429E6DFD900452E45 /* XCRemoteSwiftPackageReference "NMAUtilities" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mmr118/NMAUtilities";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = exactVersion;
+				version = 0.0.5;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		97E2829229E6DC0B00452E45 /* NMAUtilities */ = {
+		97E2829529E6DFD900452E45 /* NMAUtilities */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 97E2829129E6DC0B00452E45 /* XCRemoteSwiftPackageReference "NMAUtilities" */;
+			package = 97E2829429E6DFD900452E45 /* XCRemoteSwiftPackageReference "NMAUtilities" */;
 			productName = NMAUtilities;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -6,14 +6,28 @@
 //
 
 import Foundation
+import Combine
 
-class DataProvider: ObservableObject {
+class DataProvider: ObservableObject, FileManagerCoordinator {
+
+    typealias T = Note
     
     // MARK: - Properties
     static let shared = DataProvider()
     private let dataSourceURL: URL
-    @Published var allNotes = [Note]()
-    
+    @Published var allNotes = [Note]() {
+        didSet {
+            values = allNotes
+            objectWillChange.send()
+        }
+    }
+
+    @Published var values: [Note] = [Note]()
+
+    @Published var error: Error?
+
+
+
     // MARK: - Life Cycle
     init() {
         let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
@@ -28,8 +42,7 @@ class DataProvider: ObservableObject {
         do {
             let decoder = PropertyListDecoder()
             let data = try Data(contentsOf: dataSourceURL)
-            let decodedNotes = try! decoder.decode([Note].self, from: data)
-            
+            let decodedNotes = try decoder.decode([Note].self, from: data)
             return decodedNotes
         } catch {
             return []
@@ -45,14 +58,18 @@ class DataProvider: ObservableObject {
 
         }
     }
+
+    func save(_ value: Note) {
+
+    }
     
     func create(note: Note) {
         allNotes.insert(note, at: 0)
         saveNotes()
     }
     
-    func changeNote(note: Note, index: Int) {
-        allNotes[index] = note
+    func update(_ newValue: Note, at index: Int) {
+        allNotes[index] = newValue
         saveNotes()
     }
     
@@ -65,4 +82,9 @@ class DataProvider: ObservableObject {
         allNotes.move(fromOffsets: source, toOffset: destination)
         saveNotes()
     }
+
+    func load() {
+        self._values = Published(wrappedValue: getAllNotes())
+    }
+
 }
